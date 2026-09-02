@@ -579,7 +579,7 @@ function calcBill(input) {
     }
   } else {
     fixedCents = POTABLE_FIXED[year][meter] ?? 0;
-    lines.push({ id: "fixed", label: "Water customer charge", detail: meter, cents: fixedCents });
+    lines.push({ id: "fixed", label: "Water fixed meter charge", detail: meter, cents: fixedCents });
     const volClass = input.customerClass;
     const vol = VOLUMETRIC[volClass][year];
     if (year === "2026") {
