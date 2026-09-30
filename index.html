@@ -311,7 +311,7 @@ footer p:last-child { margin: 0; }
         <div class="field" id="zoneField">
           <label for="pumpZone">Pump zone</label>
           <select id="pumpZone" class="control"></select>
-          <p class="hint">See map below to find your pump zone area.</p>
+          <p class="hint">Applies to potable water only. See map below to find your pump zone area.</p>
         </div>
         <div class="field" id="usageField">
           <label for="usage">Monthly usage (HCF)</label>
@@ -615,8 +615,8 @@ function calcBill(input) {
     }
   }
 
-  const pumpRateCents = isFireLine ? 0 : (PUMP_ZONE_RATES[year][input.zone] ?? 0);
-  const pumpCents = isFireLine ? 0 : lineCents(usage, pumpRateCents);
+  const pumpRateCents = (isFireLine || isRecycled) ? 0 : (PUMP_ZONE_RATES[year][input.zone] ?? 0);
+  const pumpCents = (isFireLine || isRecycled) ? 0 : lineCents(usage, pumpRateCents);
   if (pumpCents > 0) {
     lines.push({ id: "pump", label: "Pump zone surcharge", detail: moneyDetail(usage, pumpRateCents), cents: pumpCents });
   }
@@ -811,10 +811,10 @@ function projectBills(base) {
   function render() {
     const s = state();
     fillSelect(els.meterSize, s.meters, (m) => m, meterLabel, s.meterSize);
-    els.zoneField.classList.toggle("hidden", s.isFire);
+    els.zoneField.classList.toggle("hidden", s.isFire || s.isRecycled);
     els.usageField.classList.toggle("hidden", s.isFire);
     els.unitsField.classList.toggle("hidden", !s.isMulti);
-    els.map.classList.toggle("hidden", s.isFire);
+    els.map.classList.toggle("hidden", s.isFire || s.isRecycled);
 
     const current = calcBill({
       customerClass: s.customerClass,
@@ -854,7 +854,7 @@ function projectBills(base) {
     els.deltaAmt.setAttribute("data-testid", "delta");
     els.deltaNote.textContent =
       "Monthly estimate at " + s.usage.toLocaleString("en-US") + " HCF" +
-      (s.isFire ? ", fire line only" : ", Zone " + s.zone) +
+      (s.isFire ? ", fire line only" : s.isRecycled ? "" : ", Zone " + s.zone) +
       ". Drought surcharge is on the current bill only.";
 
     drawChart(projection);
