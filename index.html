@@ -3,6 +3,14 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-226C69N9ED"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-226C69N9ED');
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#234E8A">
   <meta name="description" content="Estimate current and proposed Glendale Water & Power monthly water bills for 2027–2031.">
@@ -229,14 +237,6 @@ footer p:last-child { margin: 0; }
 }
   </style>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-226C69N9ED"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-226C69N9ED');
-</script>
 <body>
   <a class="skip" href="#estimator">Skip to estimator</a>
   <header>
@@ -323,7 +323,7 @@ footer p:last-child { margin: 0; }
         </div>
         <div class="field" id="usageField">
           <label for="usage">Monthly usage (HCF)</label>
-          <input id="usage" class="control" inputmode="decimal" value="14">
+          <input id="usage" class="control" inputmode="decimal" value="12">
           <p class="hint">1 HCF = 748 gallons. If Days on your bill is about 60, divide HCF by 2.</p>
         </div>
         <div class="field">
@@ -378,15 +378,15 @@ footer p:last-child { margin: 0; }
       </article>
       <article>
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><rect x="3.5" y="5" width="17" height="16" rx="2"/><path d="M8 3v4M16 3v4M3.5 10h17"/></svg>
-        <h3>Public hearing</h3>
-        <p>November 3, 2026, 6:00 p.m.<br>Council Chambers, 2nd floor<br>613 E. Broadway</p>
+        <h3>City Council meeting</h3>
+        <p>November 17, 2026<br>Council Chambers, 2nd floor<br>613 E. Broadway</p>
       </article>
     </section>
   </main>
 
   <footer>
     <div class="wrap">
-      <p>Rates are from the City of Glendale Notice of Public Hearing and Proposed Water Rate Changes (August 27, 2026). If adopted, rates take effect January 1, 2027, with annual adjustments each January 1 through 2031. This tool is an estimate prepared for customer education. It is not a bill and is not a substitute for the mailed Proposition 218 notice.</p>
+      <p>If adopted, rates take effect January 1, 2027, with annual adjustments each January 1 through 2031. This tool is an estimate prepared for customer education.</p>
       
     </div>
   </footer>
@@ -443,75 +443,75 @@ const PUMP_ZONES = [
 
 const POTABLE_FIXED = {
   2026: { "5/8-inch": 1937, "3/4-inch": 2702, "1-inch": 4237, "1 1/2-inch": 8067, "2-inch": 12664, "3-inch": 27222, "4-inch": 48676, "6-inch": 100011, "8-inch": 184294, "10-inch": 291564, "12-inch": 383510 },
-  2027: { "5/8-inch": 4200, "3/4-inch": 4200, "1-inch": 4200, "1 1/2-inch": 11337, "2-inch": 17454, "3-inch": 36824, "4-inch": 65370, "6-inch": 133677, "8-inch": 245821, "10-inch": 388551, "12-inch": 510891 },
-  2028: { "5/8-inch": 4662, "3/4-inch": 4662, "1-inch": 4662, "1 1/2-inch": 12584, "2-inch": 19374, "3-inch": 40875, "4-inch": 72561, "6-inch": 148381, "8-inch": 272861, "10-inch": 431292, "12-inch": 567089 },
-  2029: { "5/8-inch": 5128, "3/4-inch": 5128, "1-inch": 5128, "1 1/2-inch": 13842, "2-inch": 21311, "3-inch": 44963, "4-inch": 79817, "6-inch": 163219, "8-inch": 300147, "10-inch": 474421, "12-inch": 623798 },
-  2030: { "5/8-inch": 5641, "3/4-inch": 5641, "1-inch": 5641, "1 1/2-inch": 15226, "2-inch": 23442, "3-inch": 49459, "4-inch": 87799, "6-inch": 179541, "8-inch": 330162, "10-inch": 521863, "12-inch": 686178 },
-  2031: { "5/8-inch": 6036, "3/4-inch": 6036, "1-inch": 6036, "1 1/2-inch": 16292, "2-inch": 25083, "3-inch": 52921, "4-inch": 93945, "6-inch": 192109, "8-inch": 353273, "10-inch": 558393, "12-inch": 734210 },
+  2027: { "5/8-inch": 3869, "3/4-inch": 3869, "1-inch": 3869, "1 1/2-inch": 10292, "2-inch": 15798, "3-inch": 33231, "4-inch": 58923, "6-inch": 120400, "8-inch": 221332, "10-inch": 349791, "12-inch": 459898 },
+  2028: { "5/8-inch": 4295, "3/4-inch": 4295, "1-inch": 4295, "1 1/2-inch": 11424, "2-inch": 17536, "3-inch": 36886, "4-inch": 65405, "6-inch": 133644, "8-inch": 245679, "10-inch": 388268, "12-inch": 510487 },
+  2029: { "5/8-inch": 4725, "3/4-inch": 4725, "1-inch": 4725, "1 1/2-inch": 12566, "2-inch": 19290, "3-inch": 40575, "4-inch": 71946, "6-inch": 147008, "8-inch": 270247, "10-inch": 427095, "12-inch": 561536 },
+  2030: { "5/8-inch": 5198, "3/4-inch": 5198, "1-inch": 5198, "1 1/2-inch": 13823, "2-inch": 21219, "3-inch": 44633, "4-inch": 79141, "6-inch": 161709, "8-inch": 297272, "10-inch": 469805, "12-inch": 617690 },
+  2031: { "5/8-inch": 5562, "3/4-inch": 5562, "1-inch": 5562, "1 1/2-inch": 14791, "2-inch": 22704, "3-inch": 47757, "4-inch": 84681, "6-inch": 173029, "8-inch": 318081, "10-inch": 502691, "12-inch": 660928 },
 };
 
 const FIRE_LINE_FIXED = {
   2026: { "5/8-inch": 447, "3/4-inch": 447, "1-inch": 447, "1 1/2-inch": 525, "2-inch": 663, "3-inch": 1155, "4-inch": 2004, "6-inch": 5052, "8-inch": 10307, "10-inch": 18211, "12-inch": 29165 },
-  2027: { "5/8-inch": 1161, "3/4-inch": 1173, "1-inch": 1208, "1 1/2-inch": 1335, "2-inch": 1554, "3-inch": 2338, "4-inch": 3691, "6-inch": 8548, "8-inch": 16925, "10-inch": 29525, "12-inch": 46988 },
-  2028: { "5/8-inch": 1289, "3/4-inch": 1302, "1-inch": 1341, "1 1/2-inch": 1482, "2-inch": 1725, "3-inch": 2595, "4-inch": 4097, "6-inch": 9488, "8-inch": 18787, "10-inch": 32773, "12-inch": 52157 },
-  2029: { "5/8-inch": 1418, "3/4-inch": 1432, "1-inch": 1475, "1 1/2-inch": 1630, "2-inch": 1898, "3-inch": 2855, "4-inch": 4507, "6-inch": 10437, "8-inch": 20666, "10-inch": 36050, "12-inch": 57373 },
-  2030: { "5/8-inch": 1560, "3/4-inch": 1575, "1-inch": 1623, "1 1/2-inch": 1793, "2-inch": 2088, "3-inch": 3141, "4-inch": 4958, "6-inch": 11481, "8-inch": 22733, "10-inch": 39655, "12-inch": 63110 },
-  2031: { "5/8-inch": 1669, "3/4-inch": 1685, "1-inch": 1737, "1 1/2-inch": 1919, "2-inch": 2234, "3-inch": 3361, "4-inch": 5305, "6-inch": 12285, "8-inch": 24324, "10-inch": 42431, "12-inch": 67528 },
+  2027: { "5/8-inch": 1134, "3/4-inch": 1144, "1-inch": 1175, "1 1/2-inch": 1287, "2-inch": 1480, "3-inch": 2173, "4-inch": 3367, "6-inch": 7655, "8-inch": 15050, "10-inch": 26174, "12-inch": 41592 },
+  2028: { "5/8-inch": 1259, "3/4-inch": 1270, "1-inch": 1304, "1 1/2-inch": 1429, "2-inch": 1643, "3-inch": 2412, "4-inch": 3737, "6-inch": 8497, "8-inch": 16706, "10-inch": 29053, "12-inch": 46167 },
+  2029: { "5/8-inch": 1385, "3/4-inch": 1397, "1-inch": 1434, "1 1/2-inch": 1572, "2-inch": 1807, "3-inch": 2653, "4-inch": 4111, "6-inch": 9347, "8-inch": 18377, "10-inch": 31958, "12-inch": 50784 },
+  2030: { "5/8-inch": 1524, "3/4-inch": 1537, "1-inch": 1577, "1 1/2-inch": 1729, "2-inch": 1988, "3-inch": 2918, "4-inch": 4522, "6-inch": 10282, "8-inch": 20215, "10-inch": 35154, "12-inch": 55862 },
+  2031: { "5/8-inch": 1631, "3/4-inch": 1645, "1-inch": 1687, "1 1/2-inch": 1850, "2-inch": 2127, "3-inch": 3122, "4-inch": 4839, "6-inch": 11002, "8-inch": 21630, "10-inch": 37615, "12-inch": 59772 },
 };
 
 const RECYCLED_FIXED = {
   2026: { "5/8-inch": 1300, "3/4-inch": 1748, "1-inch": 2643, "1 1/2-inch": 4882, "2-inch": 7570, "3-inch": 16080, "4-inch": 28620, "6-inch": 58623, "8-inch": 107886, "10-inch": 170585, "12-inch": 224326, "14-inch": 224326, "16-inch": 224326 },
-  2027: { "5/8-inch": 2618, "3/4-inch": 2618, "1-inch": 2618, "1 1/2-inch": 6062, "2-inch": 9014, "3-inch": 18363, "4-inch": 32140, "6-inch": 65106, "8-inch": 119230, "10-inch": 188114, "12-inch": 247158, "14-inch": 370166, "16-inch": 493174 },
-  2028: { "5/8-inch": 2906, "3/4-inch": 2906, "1-inch": 2906, "1 1/2-inch": 6729, "2-inch": 10006, "3-inch": 20383, "4-inch": 35675, "6-inch": 72268, "8-inch": 132345, "10-inch": 208807, "12-inch": 274345, "14-inch": 410884, "16-inch": 547423 },
-  2029: { "5/8-inch": 3197, "3/4-inch": 3197, "1-inch": 3197, "1 1/2-inch": 7402, "2-inch": 11007, "3-inch": 22421, "4-inch": 39243, "6-inch": 79495, "8-inch": 145580, "10-inch": 229688, "12-inch": 301780, "14-inch": 451972, "16-inch": 602165 },
-  2030: { "5/8-inch": 3517, "3/4-inch": 3517, "1-inch": 3517, "1 1/2-inch": 8142, "2-inch": 12108, "3-inch": 24663, "4-inch": 43167, "6-inch": 87445, "8-inch": 160138, "10-inch": 252657, "12-inch": 331958, "14-inch": 497169, "16-inch": 662382 },
-  2031: { "5/8-inch": 3763, "3/4-inch": 3763, "1-inch": 3763, "1 1/2-inch": 8712, "2-inch": 12956, "3-inch": 26389, "4-inch": 46189, "6-inch": 93566, "8-inch": 171348, "10-inch": 270343, "12-inch": 355195, "14-inch": 531971, "16-inch": 708749 },
+  2027: { "5/8-inch": 2585, "3/4-inch": 2585, "1-inch": 2585, "1 1/2-inch": 6013, "2-inch": 8951, "3-inch": 18254, "4-inch": 31964, "6-inch": 64771, "8-inch": 118632, "10-inch": 187183, "12-inch": 245941, "14-inch": 368354, "16-inch": 490766 },
+  2028: { "5/8-inch": 2869, "3/4-inch": 2869, "1-inch": 2869, "1 1/2-inch": 6674, "2-inch": 9936, "3-inch": 20262, "4-inch": 35480, "6-inch": 71896, "8-inch": 131682, "10-inch": 207773, "12-inch": 272995, "14-inch": 408873, "16-inch": 544750 },
+  2029: { "5/8-inch": 3156, "3/4-inch": 3156, "1-inch": 3156, "1 1/2-inch": 7341, "2-inch": 10930, "3-inch": 22288, "4-inch": 39028, "6-inch": 79086, "8-inch": 144850, "10-inch": 228550, "12-inch": 300295, "14-inch": 449760, "16-inch": 599225 },
+  2030: { "5/8-inch": 3472, "3/4-inch": 3472, "1-inch": 3472, "1 1/2-inch": 8075, "2-inch": 12023, "3-inch": 24517, "4-inch": 42931, "6-inch": 86995, "8-inch": 159335, "10-inch": 251405, "12-inch": 330325, "14-inch": 494736, "16-inch": 659148 },
+  2031: { "5/8-inch": 3715, "3/4-inch": 3715, "1-inch": 3715, "1 1/2-inch": 8640, "2-inch": 12865, "3-inch": 26233, "4-inch": 45936, "6-inch": 93085, "8-inch": 170488, "10-inch": 269003, "12-inch": 353448, "14-inch": 529368, "16-inch": 705288 },
 };
 
-const RECYCLED_VOLUMETRIC = { 2026: 284, 2027: 391, 2028: 434, 2029: 477, 2030: 525, 2031: 562 };
+const RECYCLED_VOLUMETRIC = { 2026: 284, 2027: 368, 2028: 408, 2029: 449, 2030: 494, 2031: 529 };
 
 const VOLUMETRIC = {
   "Single Family": {
     2026: { tier1: 280, tier2: 411, tier3: 428 },
-    2027: { tier1: 409, tier2: 692, tier3: 0 },
-    2028: { tier1: 454, tier2: 768, tier3: 0 },
-    2029: { tier1: 499, tier2: 845, tier3: 0 },
-    2030: { tier1: 549, tier2: 930, tier3: 0 },
-    2031: { tier1: 587, tier2: 995, tier3: 0 },
+    2027: { tier1: 392, tier2: 671, tier3: 0 },
+    2028: { tier1: 435, tier2: 745, tier3: 0 },
+    2029: { tier1: 479, tier2: 820, tier3: 0 },
+    2030: { tier1: 527, tier2: 902, tier3: 0 },
+    2031: { tier1: 564, tier2: 965, tier3: 0 },
   },
   "Multi-Family": {
     2026: { tier1: 280, tier2: 411, tier3: 0 },
-    2027: { tier1: 409, tier2: 692, tier3: 0 },
-    2028: { tier1: 454, tier2: 768, tier3: 0 },
-    2029: { tier1: 499, tier2: 845, tier3: 0 },
-    2030: { tier1: 549, tier2: 930, tier3: 0 },
-    2031: { tier1: 587, tier2: 995, tier3: 0 },
+    2027: { tier1: 392, tier2: 671, tier3: 0 },
+    2028: { tier1: 435, tier2: 745, tier3: 0 },
+    2029: { tier1: 479, tier2: 820, tier3: 0 },
+    2030: { tier1: 527, tier2: 902, tier3: 0 },
+    2031: { tier1: 564, tier2: 965, tier3: 0 },
   },
   Commercial: {
     2026: { tier1: 404, tier2: 0, tier3: 0 },
-    2027: { tier1: 417, tier2: 692, tier3: 0 },
-    2028: { tier1: 463, tier2: 768, tier3: 0 },
-    2029: { tier1: 509, tier2: 845, tier3: 0 },
-    2030: { tier1: 560, tier2: 930, tier3: 0 },
-    2031: { tier1: 599, tier2: 995, tier3: 0 },
+    2027: { tier1: 400, tier2: 671, tier3: 0 },
+    2028: { tier1: 444, tier2: 745, tier3: 0 },
+    2029: { tier1: 488, tier2: 820, tier3: 0 },
+    2030: { tier1: 537, tier2: 902, tier3: 0 },
+    2031: { tier1: 575, tier2: 965, tier3: 0 },
   },
   Irrigation: {
     2026: { tier1: 419, tier2: 0, tier3: 0 },
-    2027: { tier1: 417, tier2: 692, tier3: 0 },
-    2028: { tier1: 463, tier2: 768, tier3: 0 },
-    2029: { tier1: 509, tier2: 845, tier3: 0 },
-    2030: { tier1: 560, tier2: 930, tier3: 0 },
-    2031: { tier1: 599, tier2: 995, tier3: 0 },
+    2027: { tier1: 400, tier2: 671, tier3: 0 },
+    2028: { tier1: 444, tier2: 745, tier3: 0 },
+    2029: { tier1: 488, tier2: 820, tier3: 0 },
+    2030: { tier1: 537, tier2: 902, tier3: 0 },
+    2031: { tier1: 575, tier2: 965, tier3: 0 },
   },
 };
 
 const PUMP_ZONE_RATES = {
   2026: { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0 },
-  2027: { 1: 5, 2: 25, 3: 84, 4: 183, 5: 231, 6: 342, 7: 508 },
-  2028: { 1: 6, 2: 28, 3: 93, 4: 203, 5: 256, 6: 380, 7: 564 },
-  2029: { 1: 6, 2: 31, 3: 103, 4: 223, 5: 282, 6: 418, 7: 620 },
-  2030: { 1: 7, 2: 34, 3: 113, 4: 246, 5: 310, 6: 459, 7: 682 },
-  2031: { 1: 7, 2: 36, 3: 121, 4: 263, 5: 332, 6: 491, 7: 730 },
+  2027: { 1: 5, 2: 24, 3: 82, 4: 179, 5: 226, 6: 334, 7: 496 },
+  2028: { 1: 6, 2: 27, 3: 91, 4: 199, 5: 251, 6: 371, 7: 551 },
+  2029: { 1: 6, 2: 29, 3: 100, 4: 219, 5: 276, 6: 408, 7: 606 },
+  2030: { 1: 7, 2: 32, 3: 110, 4: 240, 5: 304, 6: 449, 7: 666 },
+  2031: { 1: 7, 2: 34, 3: 118, 4: 257, 5: 325, 6: 480, 7: 713 },
 };
 
 const ALLOTMENTS = {
@@ -872,7 +872,7 @@ function projectBills(base) {
     els.customerClass.value = "Single Family";
     fillSelect(els.meterSize, POTABLE_METERS, (m) => m, meterLabel, "5/8-inch");
     els.pumpZone.value = "1";
-    els.usage.value = "14";
+    els.usage.value = "12";
     els.year.value = "2027";
     els.dwellingUnits.value = "1";
     render();
